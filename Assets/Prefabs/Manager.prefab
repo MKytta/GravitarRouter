@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &831189013292607027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831189013292607020}
+  - component: {fileID: 831189013292607022}
+  - component: {fileID: 831189013292607021}
+  - component: {fileID: 831189013292607023}
+  - component: {fileID: 831189013292607016}
+  - component: {fileID: 319515337567039333}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &831189013292607020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831189013292607027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.452061, y: 0.11217092, z: -0.11057045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &831189013292607022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831189013292607027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d2570de4d98674abfda048a5426bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gravitars: []
+  m_flyer: {fileID: 0}
+  m_closestEffect: {fileID: 0}
+--- !u!114 &831189013292607021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831189013292607027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036991d7dc0d6d345905f44cf6b2156d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_flyer: {fileID: 0}
+  m_launcher: {fileID: 0}
+  m_gravitarManager: {fileID: 831189013292607022}
+  m_levelManager: {fileID: 831189013292607016}
+--- !u!114 &831189013292607023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831189013292607027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb1711b39786b4449ecbdef832c0179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_collectables:
+  - {fileID: 0}
+  m_collectedText: {fileID: 0}
+--- !u!114 &831189013292607016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831189013292607027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5b141c464fca54f842c3f3b8499d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_flyer: {fileID: 0}
+  m_launcher: {fileID: 0}
+  m_collectablesManager: {fileID: 831189013292607023}
+  m_gravitarManager: {fileID: 831189013292607022}
+  m_UiManager: {fileID: 319515337567039333}
+  m_flyerDummy: {fileID: 3204531768894144706, guid: cf13b6aab9fdaa046be7eb9ab392f2fb, type: 3}
+--- !u!114 &319515337567039333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831189013292607027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c638eb84d988e47a0b1a306060b0c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_canvas: {fileID: 0}
+  m_levelCompletePanel: {fileID: 4852698571973973622, guid: 24c9761fed31ee047853fb2020a3709d, type: 3}
+  m_collectionText: {fileID: 0}
+  m_starImage: {fileID: 0}

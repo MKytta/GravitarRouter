@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ColliderBounce
+  - ColliderLethal
+  - ColliderExit
+  - Collectable
+  - GravitarParent
+  - CollectableParent
+  - Canvas
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1761315091
+    locked: 0
+  - name: Static Objects
+    uniqueID: 699238893
+    locked: 0
+  - name: Important Objects
+    uniqueID: 4196767027
+    locked: 0
+  - name: Particles
+    uniqueID: 1139219827
+    locked: 0
