@@ -10,7 +10,7 @@ public class CollectableScript : MonoBehaviour
     private float m_spinSpeed = 120;
     private bool m_collected = false;
 
-    private UnityAction OnCollection;
+    private CollectablesManager m_collectablesManager;
 
     void Start()
     {
@@ -25,9 +25,9 @@ public class CollectableScript : MonoBehaviour
         }
     }
 
-    public void Initiate(UnityAction OnCollection)
+    public void Initiate(CollectablesManager collectablesManager)
     {
-        this. OnCollection = OnCollection;
+        m_collectablesManager = collectablesManager;
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -35,7 +35,7 @@ public class CollectableScript : MonoBehaviour
         if (m_collected == false)
         {
             Collected();
-            OnCollection.Invoke();
+            m_collectablesManager?.ScoreCollected(transform.position);
         }
     }
 

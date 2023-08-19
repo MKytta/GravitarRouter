@@ -317,6 +317,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &101228846 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2848013801788111637, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+  m_PrefabInstance: {fileID: 101228843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &149420432
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1269172612671761469, guid: 32765fd54ea740c46b6be5349d672894, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.18
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 1269172612671761469, guid: 32765fd54ea740c46b6be5349d672894, type: 3}
       propertyPath: m_LocalPosition.y
@@ -725,15 +730,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8669343600306611817, guid: 32765fd54ea740c46b6be5349d672894, type: 3}
       propertyPath: m_Size.y
-      value: 7.7
+      value: 10.4
       objectReference: {fileID: 0}
     - target: {fileID: 9078768725990590984, guid: 32765fd54ea740c46b6be5349d672894, type: 3}
       propertyPath: m_Size.y
-      value: 7.5
+      value: 10.2
       objectReference: {fileID: 0}
     - target: {fileID: 9078768725990590984, guid: 32765fd54ea740c46b6be5349d672894, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 7.7
+      value: 10.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -851,6 +856,10 @@ PrefabInstance:
       propertyPath: m_starImage
       value: 
       objectReference: {fileID: 101228845}
+    - target: {fileID: 319515337567039333, guid: 58dd85716c669b54a95a545edc5e73b2, type: 3}
+      propertyPath: m_starPosition
+      value: 
+      objectReference: {fileID: 101228846}
     - target: {fileID: 319515337567039333, guid: 58dd85716c669b54a95a545edc5e73b2, type: 3}
       propertyPath: m_collectionText
       value: 

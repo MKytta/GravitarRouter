@@ -8,10 +8,12 @@ public class DummyCollectable : MonoBehaviour
 
     private Vector3 m_startPosition;
     private Vector3 m_endPosition;
-    private float m_duration = 0.5f;
+    private float m_time = 3f;
 
-    private float m_xVelocity = 0;
-    private float m_yVelocity = 0;
+    private float m_speed = -350f;
+    private float m_acceleration = 0.5f;
+
+    private RectTransform m_rectTransform;
     
 
     private IEnumerator m_animationRoutine;
@@ -19,6 +21,11 @@ public class DummyCollectable : MonoBehaviour
     void Start()
     {
         
+    }
+
+    private void Awake()
+    {
+        m_rectTransform = GetComponent<RectTransform>();
     }
 
     void Update()
@@ -29,23 +36,29 @@ public class DummyCollectable : MonoBehaviour
     public void Initiate(CollectablesManager manager, Vector3 startPosition, Vector3 endPosition)
     {
         m_collectablesManager = manager;
-        transform.position = startPosition;
+        m_rectTransform.localPosition = startPosition;
         m_startPosition = startPosition;
         m_endPosition = endPosition;
 
         m_animationRoutine = FlyToScore();
         StartCoroutine(m_animationRoutine);
+
     }
 
     public IEnumerator FlyToScore()
     {
-        float currX = Mathf.SmoothStep(m_startPosition.x, m_endPosition.x, 1);
-        float currY = Mathf.SmoothStep(m_startPosition.y, m_endPosition.y, 1);
-        yield return null;
-    }
+        while (m_rectTransform.localPosition != m_endPosition)
+        {
 
-    private float ExponentialSpeed()
-    {
-        return 0;
+            m_time += Time.deltaTime;
+            m_speed += m_acceleration * Mathf.Pow(m_time, 2);
+
+            m_rectTransform.localPosition = Vector3.MoveTowards(m_rectTransform.localPosition, m_endPosition, m_speed * Time.deltaTime);
+
+            yield return null;
+        }
+
+        m_collectablesManager.VisualScoreCollected();
+        Destroy(gameObject);
     }
 }

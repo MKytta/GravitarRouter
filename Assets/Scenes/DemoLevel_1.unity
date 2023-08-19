@@ -131,6 +131,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083425026525282300, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1280968000921219304, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
       propertyPath: m_Name
       value: LevelCanvas
@@ -244,6 +296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &101228846 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2848013801788111637, guid: c213e9f5fde182c40b71f47dfc326ccc, type: 3}
+  m_PrefabInstance: {fileID: 101228843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &149420432
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +627,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 101228845}
     - target: {fileID: 319515337567039333, guid: 58dd85716c669b54a95a545edc5e73b2, type: 3}
+      propertyPath: m_starPosition
+      value: 
+      objectReference: {fileID: 101228846}
+    - target: {fileID: 319515337567039333, guid: 58dd85716c669b54a95a545edc5e73b2, type: 3}
       propertyPath: m_collectionText
       value: 
       objectReference: {fileID: 455733516}
@@ -649,6 +710,10 @@ PrefabInstance:
       propertyPath: m_collectedText
       value: 
       objectReference: {fileID: 455733516}
+    - target: {fileID: 831189013292607023, guid: 58dd85716c669b54a95a545edc5e73b2, type: 3}
+      propertyPath: m_dummyCollectablePrefab
+      value: 
+      objectReference: {fileID: 6171898515408772223, guid: 5eef57025cec7f04db6291c71c446b5e, type: 3}
     - target: {fileID: 831189013292607023, guid: 58dd85716c669b54a95a545edc5e73b2, type: 3}
       propertyPath: m_collectables.Array.size
       value: 0
@@ -958,11 +1023,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1057513610807450795, guid: 019f6f72607142947b90ea8a811326f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5176024
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 1057513610807450795, guid: 019f6f72607142947b90ea8a811326f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.307
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 1057513610807450795, guid: 019f6f72607142947b90ea8a811326f0, type: 3}
       propertyPath: m_LocalPosition.z

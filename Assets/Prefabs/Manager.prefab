@@ -82,6 +82,7 @@ MonoBehaviour:
   m_collectables:
   - {fileID: 0}
   m_collectedText: {fileID: 0}
+  m_dummyCollectablePrefab: {fileID: 0}
 --- !u!114 &831189013292607016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_gravitarManager: {fileID: 831189013292607022}
   m_UiManager: {fileID: 319515337567039333}
   m_flyerDummy: {fileID: 3204531768894144706, guid: cf13b6aab9fdaa046be7eb9ab392f2fb, type: 3}
+  m_levelMusic: {fileID: 0}
 --- !u!114 &319515337567039333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,3 +118,4 @@ MonoBehaviour:
   m_levelCompletePanel: {fileID: 4852698571973973622, guid: 24c9761fed31ee047853fb2020a3709d, type: 3}
   m_collectionText: {fileID: 0}
   m_starImage: {fileID: 0}
+  m_dummyCollectable: {fileID: 6171898515408772223, guid: 5eef57025cec7f04db6291c71c446b5e, type: 3}
