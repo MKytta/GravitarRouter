@@ -8,6 +8,7 @@ public class FlyerScript : MonoBehaviour
     public OutOfBoundsArrowScript m_arrow;
     public Animator m_animator;
     public AudioClip m_wallHit;
+    public AudioClip m_BasicDeathSound;
     public GameObject m_deathParticles;
 
     private Vector2 m_movement = Vector2.zero;
@@ -69,6 +70,7 @@ public class FlyerScript : MonoBehaviour
         }
         if (collision.gameObject.tag == "ColliderLethal")
         {
+            SoundManager.instance.PlaySound(m_BasicDeathSound);
             Death();
         }
     }

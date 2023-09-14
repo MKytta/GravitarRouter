@@ -13,10 +13,12 @@ public class StateManager : MonoBehaviour
     {
         Launching,
         Flying,
-        LevelFinished
+        LevelFinished,
+        Pause
     }
 
     public States m_currentState = States.Launching;
+    private States m_previousState = States.Launching;
 
     private void Awake()
     {
@@ -40,14 +42,31 @@ public class StateManager : MonoBehaviour
         
     }
 
+    public void ResetState()
+    {
+        m_previousState = States.Launching;
+        m_currentState = States.Launching;
+    }
+
     public void SetState(States state)
     {
+        m_previousState = m_currentState;
         m_currentState = state;
         OnStateChange.Invoke();
+    }
+
+    public void ResumePreviousState()
+    {
+        SetState(m_previousState);
     }
 
     public States GetState()
     {
         return m_currentState;
+    }
+
+    public States GetPreviousState()
+    {
+        return m_previousState;
     }
 }

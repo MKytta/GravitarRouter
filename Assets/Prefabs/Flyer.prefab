@@ -134,7 +134,7 @@ Transform:
   m_Children:
   - {fileID: 8564253954423928921}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2916741185809263302
 SpriteRenderer:
@@ -203,6 +203,7 @@ MonoBehaviour:
   m_arrow: {fileID: 2017989773646481960}
   m_animator: {fileID: 3586489587327237850}
   m_wallHit: {fileID: 8300000, guid: 041010dec81324547a219fcbea2eea16, type: 3}
+  m_BasicDeathSound: {fileID: 8300000, guid: 42f9616519095da43bc1cc4095d209ee, type: 3}
   m_deathParticles: {fileID: 5823680740580628061, guid: aa799156930b0f2419543252acc4c027, type: 3}
 --- !u!58 &-3709435845884271264
 CircleCollider2D:

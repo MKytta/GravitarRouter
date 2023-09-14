@@ -306,6 +306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_text: {fileID: 5630192843581431043}
+  m_allCollectedSound: {fileID: 0}
+  m_allCollectedEffect: {fileID: 8413714037467268842, guid: cca5ca463ddd2174093d4be4832bf0fb, type: 3}
 --- !u!1 &8761967467785607320
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9112503778946190572, guid: ed8335d42c70576489e38b0a7f0c39b4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -60
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 9112503778946190572, guid: ed8335d42c70576489e38b0a7f0c39b4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -689,7 +691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9112503778946190572, guid: ed8335d42c70576489e38b0a7f0c39b4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 60
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 9112503778946190572, guid: ed8335d42c70576489e38b0a7f0c39b4, type: 3}
       propertyPath: m_AnchoredPosition.y

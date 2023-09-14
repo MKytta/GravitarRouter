@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     public LauncherScript m_launcher;
     public CollectablesManager m_collectablesManager;
     public GravitarManager m_gravitarManager;
-    public UiManager m_UiManager;
+    public UiManager m_uiManager;
     //public LevelGenerator m_levelGenerator;
     public GameObject m_flyerDummy;
 
@@ -22,8 +22,9 @@ public class LevelManager : MonoBehaviour
     {
         OnDeath = ResetLevel;
         OnWin = WinLevel;
-        m_flyer.Initiate(OnDeath, OnWin);
+        StateManager.instance.ResetState();
         StateManager.instance.OnStateChange += VictoryScreen;
+        m_flyer.Initiate(OnDeath, OnWin);
 
         SoundManager.instance.LevelStartPlayMusic(m_levelMusic);
     }
@@ -62,6 +63,11 @@ public class LevelManager : MonoBehaviour
         LevelSelectionManager.instance.AdvanceLevel();
     }
 
+    public void PauseLevel()
+    {
+        m_uiManager.CreatePauseMenu();
+    }
+
     public void FlyerLaunched()
     {
         StateManager.instance.SetState(StateManager.States.Flying);
@@ -72,7 +78,7 @@ public class LevelManager : MonoBehaviour
     {
         if (StateManager.instance.GetState() == StateManager.States.LevelFinished)
         {
-            m_UiManager.LevelCompleted(m_collectablesManager.GetCollectedStars(), m_collectablesManager.GetMaxStars());
+            m_uiManager.LevelCompleted(m_collectablesManager.GetCollectedStars(), m_collectablesManager.GetMaxStars());
         }
     }
 

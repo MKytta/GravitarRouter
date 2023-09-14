@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class LevelCompletePanel : MonoBehaviour
 {
     public TMPro.TMP_Text m_text;
+    public AudioClip m_allCollectedSound;
 
     private int m_collectedStars = 0;
     private int m_maxStars = 1;
@@ -13,7 +14,7 @@ public class LevelCompletePanel : MonoBehaviour
     private IEnumerator m_appearRoutine;
 
     private float m_appearTime = 0.6f;
-    private float m_starCountTime = 1f;
+    private float m_starCountTime = 0.8f;
 
     private LevelManager m_levelManager;
 
@@ -92,6 +93,7 @@ public class LevelCompletePanel : MonoBehaviour
         }
 
         float _betweenStars = m_starCountTime / m_collectedStars;
+        _timer += _betweenStars / 2;
 
         while (_timer <= m_starCountTime)
         {
@@ -111,6 +113,7 @@ public class LevelCompletePanel : MonoBehaviour
     public IEnumerator AllCollected()
     {
         Debug.Log("SMALL ANIMATION WITH SPARKLES AND MAYBE SOUND HERE");
+        SoundManager.instance.PlaySound(m_allCollectedSound);
         yield return null;
     }
 }

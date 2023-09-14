@@ -47,6 +47,11 @@ public class LevelSelectionManager : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
+    public void LoadMenuScene()
+    {
+        LoadNamedScene("MainMenu");
+    }
+
     public void SetCurrentLevel(int currentLevel)
     {
         m_currentLevel = currentLevel;

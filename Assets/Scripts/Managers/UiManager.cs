@@ -7,6 +7,7 @@ public class UiManager : MonoBehaviour
 {
     public Canvas m_canvas;
     public GameObject m_levelCompletePanel;
+    public GameObject m_pauseMenu;
     public TMPro.TMP_Text m_collectionText;
     public Image m_starImage;
     public RectTransform m_starPosition;
@@ -27,6 +28,11 @@ public class UiManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void CreatePauseMenu()
+    {
+        GameObject _panel = Instantiate(m_pauseMenu, m_canvas.transform);
     }
 
     public void LevelCompleted(int collectedStars, int maxStars)

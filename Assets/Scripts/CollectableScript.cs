@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class CollectableScript : MonoBehaviour
 {
     public GameObject m_graphic;
+    public AudioClip m_collectSound;
 
     private float m_spinSpeed = 120;
     private bool m_collected = false;
@@ -42,6 +43,7 @@ public class CollectableScript : MonoBehaviour
     public void Collected()
     {
         m_collected = true;
+        SoundManager.instance.PlaySound(m_collectSound);
         m_graphic.SetActive(false);
     }
 

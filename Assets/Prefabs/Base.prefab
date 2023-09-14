@@ -1028,7 +1028,7 @@ Transform:
   - {fileID: 1297028116369282205}
   - {fileID: 7789242743410291219}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4487875454824475889
 SpriteRenderer:
@@ -1108,6 +1108,8 @@ MonoBehaviour:
   - {fileID: 7015187134974096547}
   - {fileID: 3624614030784801592}
   - {fileID: 6341785487124643793}
+  m_launchSound: {fileID: 8300000, guid: 60cb6432bb2a28946a2eae4dcc434fbf, type: 3}
+  m_continuousLaunchingSound: {fileID: 8300000, guid: adadc9662fa126749856b3c0f0c2029f, type: 3}
 --- !u!1 &4758647647052849717
 GameObject:
   m_ObjectHideFlags: 0

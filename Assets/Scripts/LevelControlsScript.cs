@@ -12,6 +12,8 @@ public class LevelControlsScript : MonoBehaviour
     private float m_launchTimer = 0;
     private float m_maxPowerTime = 1.5f;
 
+    private bool m_startedLaunch = false;
+
     void Start()
     {
         
@@ -19,7 +21,13 @@ public class LevelControlsScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire1") && StateManager.instance.GetState() == StateManager.States.Launching)
+        if (Input.GetButtonDown("Fire1") && StateManager.instance.GetState() == StateManager.States.Launching)
+        {
+            m_startedLaunch = true;
+            m_launcher.StartLaunching();
+        }
+
+        if (Input.GetButton("Fire1") && StateManager.instance.GetState() == StateManager.States.Launching && m_startedLaunch == true)
         {
             m_launchTimer += Time.deltaTime;
             m_launcher.SetPowerLevel((m_launchTimer / m_maxPowerTime) * 100f);
@@ -31,6 +39,7 @@ public class LevelControlsScript : MonoBehaviour
             m_launcher.LaunchFlyer(m_flyer, _fixedTimer, m_maxPowerTime);
             m_levelManager.FlyerLaunched();
             m_launchTimer = 0;
+            m_startedLaunch = false;
             m_launcher.SetPowerLevel(0);
         }
 
@@ -49,6 +58,11 @@ public class LevelControlsScript : MonoBehaviour
             {
                 m_levelManager.RetryLevel();
             }
+        }
+
+        if (Input.GetButtonDown("Cancel") && StateManager.instance.GetState() != StateManager.States.Pause)
+        {
+            m_levelManager.PauseLevel();
         }
     }
 }
