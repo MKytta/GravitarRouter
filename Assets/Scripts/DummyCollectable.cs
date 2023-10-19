@@ -9,9 +9,12 @@ public class DummyCollectable : MonoBehaviour
     private Vector3 m_startPosition;
     private Vector3 m_endPosition;
     private float m_time = 3f;
+    private float m_screenSizeModifier = 1;
 
     private float m_speed = -350f;
     private float m_acceleration = 0.5f;
+    private float m_screenSizeTarget = 1600;
+
 
     private RectTransform m_rectTransform;
     
@@ -26,6 +29,10 @@ public class DummyCollectable : MonoBehaviour
     private void Awake()
     {
         m_rectTransform = GetComponent<RectTransform>();
+        float _clampedWidth = Mathf.Clamp(Screen.width, 200, Mathf.Infinity);
+        m_screenSizeModifier =  m_screenSizeTarget / _clampedWidth;
+
+        StateManager.instance.OnStateChange += StateCheck;
     }
 
     void Update()
@@ -45,13 +52,21 @@ public class DummyCollectable : MonoBehaviour
 
     }
 
+    public void StateCheck()
+    {
+        if (StateManager.instance.GetState() == StateManager.States.Launching)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public IEnumerator FlyToScore()
     {
         while (m_rectTransform.localPosition != m_endPosition)
         {
 
             m_time += Time.deltaTime;
-            m_speed += m_acceleration * Mathf.Pow(m_time, 2);
+            m_speed += m_acceleration * Mathf.Pow(m_time, 2) * m_screenSizeModifier;
 
             m_rectTransform.localPosition = Vector3.MoveTowards(m_rectTransform.localPosition, m_endPosition, m_speed * Time.deltaTime);
 
@@ -60,5 +75,10 @@ public class DummyCollectable : MonoBehaviour
 
         m_collectablesManager.VisualScoreCollected();
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        StateManager.instance.OnStateChange -= StateCheck;
     }
 }
